@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <title>Nicolás Ramos / Sofware Engineer</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <header data-aos="fade-down">
+            <div class="container">
+                <p class="logo"><a href="#"><stan class="mainColor">&lt;</stan>NR<stan class="letterSeparator">M</stan><stan class="mainColor"><stan class="fontChanger">/</stan>&gt;</stan> </a></p>
+                <div class="toggleMenu">
+                  <img id="bars" src="./assets/skillLogos/barras.png" alt="barras pensalas">
+                </div>
+                <nav>
+                    <a href="#">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+        </header>
+        
+        <section id="home" class="home">
+            <div class="homeBackground"></div>
+            <picture data-aos="fade-down">
+                <source type="image/webp" srcset="./assets/pictures/profilePicture.webp" />
+                <source type="image/jpeg" srcset="./assets/pictures/profilePicture.jpg" />
+                <img class="homeProfilePicture" alt="Profile Picture" />
+            </picture>
+            <div data-aos="fade-down" class="homeText">
+                <h1><span class="typed"></span><br><stan class="mainColor">I'm Nicolás Ramos</stan><br>Software Engineer<br></h1>
+                <form action="./assets/files/Libro_XC.pdf" target="_blank">
+                    <button id="CVButton">Download my CV</button>
+                </form>
+            </div>
+        </section>
+        
+        <section data-aos="fade-down" id="about" class="about">
+            <div class="container">
+                <h2>About me</h2>
+                <div class="aboutGrid">
+                    <div class="aboutText">
+                        <h3><br>I'm Nicolás Ramos Mignone a Software Engineer Student</h3>
+                        <p>
+                            I'm a Software Engineer student with experience on many different programming languages such as Python or C# and have professional experience on FrontEnd Web developing as freelancer.
+                            <br><br> I am always seeking to improve my skills and continue growing professionally in order to make valuable contributions at the working team I am part of.
+                        </p>
+                        <h3><br>Languages:<br><br></h3>
+                        <div class="languagesGrid">
+                            <img id="espFlag" src="./assets/skillLogos/España.png" alt="Spanish Flag">
+                            <p>SPANISH &#160;--&#160; NATIVE</p>
+                            <img id="engFlag" src="./assets/skillLogos/Inglesa.jpg" alt="English Flag">
+                            <p>ENGLISH &#160;--&#160; C1</p>
+                            <img id="catFlag" src="./assets/skillLogos/cataluña.png" alt="Catalan Flag">
+                            <p>CATALAN &#160;--&#160; NATIVE</p>
+                        </div>
+                    </div>
+                    <div class="aboutColumn">
+                        <h3>&#13;Knowledge on:</h3>
+                        <div class="aboutSkills">
+                            <div class="skillItem">
+                                <img class="skillLogo" id="skillLogo1" src="./assets/skillLogos/CSS3.png" alt="CSS3 Logo"/>
+                                <div class="skillName">CSS</div>
+                            </div>
+                            <div class="skillItem">
+                                <img class="skillLogo" id="skillLogo2" src="./assets/skillLogos/html.png" alt="HTML Logo"/>
+                                <div class="skillName">&#160;HTML</div>
+                            </div>
+                            <div class="skillItem">
+                                <img class="skillLogo" id="skillLogo3" src="./assets/skillLogos/JavaScript.png" alt="JavaScript Logo"/>
+                                <div class="skillName">&#160;JS</div>
+                            </div>
+                            <div class="skillItem">
+                                <img class="skillLogo" id="skillLogo4" src="./assets/skillLogos/Csharp.png" alt="Csharp Logo"/>
+                                <div class="skillName">&#160;C#</div>
+                            </div>
+                            <div class="skillItem">
+                                <img class="skillLogo" id="skillLogo5" src="./assets/skillLogos/Python.png" alt="Python Logo"/>
+                                <div class="skillName">Python</div>
+                            </div>
+                            <div class="skillItem">
+                                <img class="skillLogo" id="skillLogo6" src="./assets/skillLogos/Java.png" alt="Java Logo"/>
+                                <div class="skillName">Java</div>
+                            </div>
+                            <div class="skillItem">
+                                <img class="skillLogo" id="skillLogo7" src="./assets/skillLogos/c++.png" alt="CPlusPlus Logo"/>
+                                <div class="skillName">&#160;C++</div>
+                            </div>
+                            <div class="skillItem">
+                                <img class="skillLogo" id="skillLogo8" src="./assets/skillLogos/MySQL.png" alt="MySQL Logo"/>
+                                <div class="skillName">&#160;MySQL</div>
+                            </div>
+                            <div class="skillItem">
+                                <img class="skillLogo" id="skillLogo9" src="./assets/skillLogos/GitHub.png" alt="GitHub Logo"/>
+                                <div class="skillName">GitHub</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>          
+        <div class="sectionDivisor"><div class="line"></div></div>
+        <section data-aos="fade-down" id="portfolio">
+            <div class="container">
+              <h2>Portfolio</h2>
+              <h3><br>Here you can see some projects I have recently worked on.<br><br></h3>
+              <div class="portfolioGrid">
+                <div class="portfolioItem">
+                  <picture>
+                    <source type="image/jpeg" srcset="./assets/pictures/EDAGame.JPG" />
+                    <img class="portfolioImg" alt="portfolio item" />
+                  </picture>
+                  <div class="portfolioDescription">
+                    <h3 class="portfolioDescriptionTitle">Pandemic FIB 2021</h3>
+                    <p class="portfolioDescriptionText">
+                      Advanced Algorithms Project: C++.
+                    </p>
+                    <div class="buttonsContainer">
+                      <a
+                        class="button"
+                        href="https://jutge.org/problems/P41108_en"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i class="fas fa-globe-americas"></i> Website
+                      </a>
+                      <a
+                        class="button"
+                        href="https://github.com/Lmntalx/juego_eda"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i class="fab fa-github"></i> Repository
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolioItem">
+                  <picture>
+                    <source type="image/jpeg" srcset="./assets/pictures/ArduinoTR.JPG" />
+                    <img class="portfolioImg" alt="portfolio item" />
+                  </picture>
+                  <div class="portfolioDescription">
+                    <h3 class="portfolioDescriptionTitle">Phone Hacking</h3>
+                    <p class="portfolioDescriptionText">
+                      Phone Hacking: Arduino, Metasploit.
+                    </p>
+                    <div class="buttonsContainer">
+                      <a
+                        class="button"
+                        href="./assets/files/TR_NicolásRamos.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i class="fas fa-file"></i>file
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolioItem">
+                  <picture>
+                    <source type="image/jpeg" srcset="./assets/pictures/Hackathon2020.JPG" />
+                    <img class="portfolioImg" alt="portfolio item" />
+                  </picture>
+                  <div class="portfolioDescription">
+                    <h3 class="portfolioDescriptionTitle">Hackathon2020(TV3)</h3>
+                    <p class="portfolioDescriptionText">
+                      Web Application: MySQL, HTML, CSS.
+                    </p>
+                    <div class="buttonsContainer">
+                      <a
+                        class="button"
+                        href="https://www.fib.upc.edu/ca/la-marato/edicions-anteriors/la-marato-2020"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i class="fas fa-globe-americas"></i> Website
+                      </a>
+                      <a
+                      class="button"
+                      href="https://github.com/Lmntalx/Hackathon2020"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i class="fab fa-github"></i> Repository
+                    </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        <div class="sectionDivisor"><div class="line"></div></div>
+        <section data-aos="fade-down" id="contact" class="contact">
+            <div class="container">
+                <h2>Contact</h2>
+                <h3><br>Contact me for more!</h3>
+                <div class="contactMainZone">
+                    <h4>EMAIL</h4>
+                    <p>nicolasramosmignone@gmail.com
+                        <form action="./assets/files/Libro_XC.pdf" target="_blank">
+                            <button id="CVButton2">Download my CV</button>
+                        </form>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <p>&copy; Copyright 2022. Nicolás Ramos</p>
+            </div>
+        </footer>
+        <script src="./scripts/typedLibrary.js"></script>
+        <script src="./scripts/typing.js"></script>
+        <script src="./scripts/gsapAnimationsLibrary.js"></script>
+        <script src="./scripts/logoAnimation.js"></script>
+        <script src="./scripts/index.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+    </body>
+</html>
