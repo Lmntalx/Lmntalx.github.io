@@ -426,7 +426,7 @@ footer a{
 
 footer img{
     background-color: tan;
-    max-height: 50px;
+    max-height: 5px;
     border-radius: 50%;
     transform: translateY(-120px);
     margin-left: 15px;
