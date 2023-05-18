@@ -3,19 +3,30 @@ const homebg = document.querySelector(".homeBackground");
 const menu = document.querySelector(".toggleMenu");
 const links = document.querySelector("nav");
 const sections = document.querySelectorAll("section");
+let menuOpen = false;
+
 const config = {
   rootMargin: "0px",
   threshold: [0.6, 0.9],
 };
 
-function handleLlinks() {
+function handleLinks() {
   if (window.innerWidth <= 991) {
+    if(!menuOpen){
+      menu.classList.add('open');
+      menuOpen = true;
+    }
+    else{
+      menu.classList.remove('open');
+      menuOpen = false;
+    }
+    
     links.classList.toggle("visible");
   }
 }
 
-menu.addEventListener("click", handleLlinks);
-links.addEventListener("click", handleLlinks);
+menu.addEventListener("click", handleLinks);
+links.addEventListener("click", handleLinks);
 
 /*window.addEventListener("scroll", function () {
   window.scrollY > 100 && (navbar.style.background = `rgba(0,0,0,0.9)`);
