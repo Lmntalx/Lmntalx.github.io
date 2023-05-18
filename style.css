@@ -222,29 +222,6 @@ header {
   z-index: 99;
 }
 
-header.offset {
-  -webkit-transform: translate3d(0, -100%, 0);
-  -ms-transform: translate3d(0, -100%, 0);
-  transform: translate3d(0, -100%, 0);
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-}
-
-header.scrolling {
-  -webkit-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-header.sticky {
-  position: fixed;
-  top: 0;
-  background-color: #000000 !important;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 600;
-}
-
 header nav {
   display: flex;
   flex-direction: row;
@@ -697,7 +674,7 @@ footer p {
     background-color: #181818;
     transform: translateX(200%);
     opacity: 1;
-    transition: 2s;
+    transition: 1s;
     font-size: 1em;
     justify-content: center;
   }
