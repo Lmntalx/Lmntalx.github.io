@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,10 +8,14 @@
   flex-wrap: wrap;
 }
 
+:root{
+	--x: 0;
+	--y: 0;
+}
 
 html {
   scroll-behavior: smooth;
-  background-color: rgb(230, 230, 230);
+  background-color: rgb(200, 200, 200);
 }
 
 /* #region preloader*/
@@ -144,21 +149,22 @@ h1 {
   font-weight: lighter;
 }
 h2 {
-  font-family: "Roboto", sans-serif;
-  font-size: 2.25em;
-  color: #333;
+  font-family: 'Teko', sans-serif;
+  text-transform: uppercase;
+  font-size: 4em;
+  color: #c1a684;
   margin-left: 25px;
 }
 h3 {
   font-family: "Roboto", sans-serif;
   font-size: 1.75em;
-  color: #444;
+  color: #333;
   margin-left: 25px;
 }
 p {
   font-family: "Roboto", sans-serif;
   font-size: 1.25em;
-  color: #555;
+  color: #444;
   margin-left: 25px;
 }
 
@@ -220,6 +226,29 @@ header {
   position: fixed;
   width: 100%;
   z-index: 99;
+}
+
+header.offset {
+  -webkit-transform: translate3d(0, -100%, 0);
+  -ms-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+header.scrolling {
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+header.sticky {
+  position: fixed;
+  top: 0;
+  background-color: #000000 !important;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 600;
 }
 
 header nav {
@@ -329,24 +358,25 @@ header a:hover {
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-bottom: 100px;
 }
 
 .homeBackground {
   background-color: #181818;
-  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   height: 100%;
   width: 100%;
   position: absolute;
   z-index: -1;
+  /* background: radial-gradient(circle at var(--x) var(--y) , #333, #181818); */
 }
 
 .homeProfilePicture {
   height: 550px;
   margin-left: 50px;
   margin-top: 25px;
-  filter: sepia(40%) grayscale(20%);
+  filter: sepia(10%) grayscale(0%);
   border-radius: 5px;
 }
 
@@ -367,13 +397,11 @@ header a:hover {
 /* #endregion */
 /* #region about */
 
+
 section[id="about"] {
   scroll-margin-top: -1px;
 }
 
-.about {
-  padding-top: 90px;
-}
 
 .aboutGrid {
   display: grid;
@@ -408,32 +436,6 @@ section[id="about"] {
   padding-left: 50px;
 }
 
-.aboutSkills {
-  display: grid;
-  grid-template-columns: 0.4fr 0.4fr 0.5fr;
-  gap: 10px;
-  column-gap: 7.5px;
-}
-
-.skillItem {
-  font-size: 65px;
-  color: var(--grey);
-  padding: 35px;
-  transition: all 0.3s;
-  min-width: 130px;
-  height: 180px;
-}
-
-.skillItem img {
-  max-height: 75px;
-  max-width: 100px;
-}
-
-.skillName {
-  font-size: 0.4em;
-  color: #555;
-  text-align: left;
-}
 
 .sectionDivisor {
   padding-top: 31px;
@@ -447,7 +449,8 @@ section[id="about"] {
   margin-top: 75px;
   height: 1px;
   width: 800px;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: #000;
+  opacity: 25%;
 }
 /* #endregion */
 /* #region portfolio */
@@ -557,7 +560,7 @@ section[id="contact"] {
 }
 
 .contact h4 {
-  font-family: "Consolas", sans-serif;
+  font-family: "Teko", sans-serif;
   text-align: center;
   font-size: 1.5em;
   margin-top: 25px;
@@ -674,7 +677,7 @@ footer p {
     background-color: #181818;
     transform: translateX(200%);
     opacity: 1;
-    transition: 1s;
+    transition: 2s;
     font-size: 1em;
     justify-content: center;
   }
@@ -709,15 +712,13 @@ footer p {
     padding-left: 20px;
   }
 
-  .languagesGrid p {
-    margin-right: 0px;
-    padding-right: 0px;
-    width: 100%;
-  }
-
   .aboutGrid,
   .portfolioGrid {
     grid-template-columns: 1fr;
+  }
+
+  #myCanvas{
+    width: 10%;
   }
 }
 
@@ -746,9 +747,6 @@ footer p {
 }
 
 @media (max-width: 500px) {
-  .aboutSkills {
-    grid-template-columns: 1fr 1fr;
-  }
 
   .portfolioDescription {
     padding: 0px 20px;
