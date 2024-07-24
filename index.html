@@ -24493,8 +24493,9 @@
 
           paths.forEach((path, index) => {
             path.style.animationDelay = `${index * animationDuration}s`;
+            path.classList.add("animated-path");
           });
-        }, 3000); // Delay in milliseconds (5000ms = 5 seconds)
+        }, 5000); // Delay in milliseconds (5000ms = 5 seconds)
       });
     </script>
   </body>
