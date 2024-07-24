@@ -24487,12 +24487,14 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const paths = document.querySelectorAll("svg path");
-        const animationDuration = 0.04; // Duration of each path animation in seconds
+        setTimeout(() => {
+          const paths = document.querySelectorAll("svg path");
+          const animationDuration = 0.04; // Duration of each path animation in seconds
 
-        paths.forEach((path, index) => {
-          path.style.animationDelay = `${index * animationDuration}s`;
-        });
+          paths.forEach((path, index) => {
+            path.style.animationDelay = `${index * animationDuration}s`;
+          });
+        }, 3000); // Delay in milliseconds (5000ms = 5 seconds)
       });
     </script>
   </body>
