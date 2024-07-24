@@ -12,7 +12,7 @@ svg {
   margin: 20px;
 }
 
-path {
+.animated-path {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: draw 0.035s linear forwards;
